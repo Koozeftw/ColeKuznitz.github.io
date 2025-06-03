@@ -2,9 +2,6 @@
 # Investigating the Relationship Between Cuisine and Recipe Rating
 Author: Cole Kuznitz  
 
-## Overview {#overview}
-
-
 ## Introduction {#introduction}
 blah blah blah 
 
