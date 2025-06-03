@@ -7,22 +7,22 @@ blah blah blah blah
 # Introduction {#introduction}
 blah blah blah 
 
-# Data Cleaning and Exploratory Analysis {#data cleaning and exploratory analysis}
+# Data Cleaning and Exploratory Analysis {#datacleaningandexploratoryanalysis}
 blah blah blah 
 
-# Assessment of Missingness {#assessment of missingness}
+# Assessment of Missingness {#assessmentofmissingness}
 blah blah blah 
 
-# Hypothesis Testing {#hypothesis testing}
+# Hypothesis Testing {#hypothesistesting}
 blah blah blah
 
-# Framing a Prediction Problem (#framing a prediction problem}
+# Framing a Prediction Problem (#framingapredictionproblem}
 blah blah blah 
 
-# Baseline Model {#baseline model}
+# Baseline Model {#baselinemodel}
 blah blah blah
 
-# Final Model {#final model}
+# Final Model {#finalmodel}
 blah blah blah
 
-# Fairness Analysis {#fairness analysis}
+# Fairness Analysis {#fairnessanalysis}
