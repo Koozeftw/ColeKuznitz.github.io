@@ -16,7 +16,7 @@ blah blah blah
 # Hypothesis Testing {#hypothesistesting}
 blah blah blah
 
-# Framing a Prediction Problem (#framingapredictionproblem}
+# Framing a Prediction Problem {#framingapredictionproblem}
 blah blah blah 
 
 # Baseline Model {#baselinemodel}
