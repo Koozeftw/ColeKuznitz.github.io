@@ -1,39 +1,50 @@
-<header>
-  <nav>
-    <ul>
-      {% for item in site.data.navigation %}
-        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
+<nav class="sidebar-nav">
+  <ul>
+    {% for item in site.data.navigation %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 
 <style>
   html {
     scroll-behavior: smooth;
   }
-  header {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ccc;
-    padding: 1em 0;
-    position: sticky;
+
+  body {
+    margin-left: 220px; /* Leave space for sidebar */
+  }
+
+  .sidebar-nav {
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
     z-index: 1000;
   }
-  nav ul {
+
+  .sidebar-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
   }
-  nav a {
+
+  .sidebar-nav li {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-nav a {
     text-decoration: none;
     color: #0366d6;
     font-weight: bold;
   }
-  nav a:hover {
+
+  .sidebar-nav a:hover {
     text-decoration: underline;
   }
 </style>
