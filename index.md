@@ -38,11 +38,27 @@
 <summary><strong>Click to expand cuisine dictionary</strong></summary>
 <pre>
 cuisine_keywords = {
-    'italian': ['pasta', 'risotto', 'lasagna', 'gnocchi', ...],
-    'mexican': ['taco', 'burrito', 'quesadilla', 'enchilada', ...],
-    'indian': ['masala', 'curry', 'tikka', 'naan', ...],
-    ...
-    'middle eastern': ['mansaf', 'kofta', 'fattoush', 'mutabbal', ...]
+    'italian': ['pasta', 'risotto', 'lasagna', 'gnocchi', 'carbonara', 'meatball', 'ziti', 'pizza', 'chicken parmigiana', 'chicken parm', 'eggplant parm', 'italian', 'macaroni', 'bolognese', 'caprese', 'marinara', 'alfredo', 'penne', 'fettuccine', 'spaghetti', 'prosciutto', 'bruschetta', 'calzone', 'tortellini'],
+    'mexican': ['taco', 'burrito', 'quesadilla', 'enchilada', 'salsa', 'carne asada', 'tacos', 'burritos', 'mexican', 'fajita', 'guacamole', 'tamale', 'chilaquiles', 'pozole', 'elote', 'horchata', 'menudo', 'mole', 'sope', 'taquito'],
+    'indian': ['masala', 'curry', 'tikka', 'naan', 'dal', 'naan', 'samosas', 'indian', 'biryani', 'paneer', 'chana', 'rogan', 'roti', 'kachori', 'bhaji', 'pulao', 'idli', 'dosas', 'vindaloo', 'chaat'],
+    'japanese': ['sushi', 'teriyaki', 'ramen', 'udon', 'tonkatsu', 'karaage', 'japanese', 'sashimi', 'miso', 'yakitori', 'tempura', 'bento', 'onigiri', 'gyoza', 'matcha'],
+    'chinese': ['dumpling', 'kung', 'noodle', 'lo', 'mein', 'peking duck', 'pork intestine', 'dim sum', 'firecracker', 'chinese', 'wonton', 'mapo', 'chow mein', 'hot pot', 'scallion pancake', 'szechuan', 'general tso', 'char siu'],
+    'french': ['crepe', 'ratatouille', 'baguette', 'souffle', 'escargot', 'french', 'coq au vin', 'bouillabaisse', 'cassoulet', 'croissant', 'quiche', 'tarte', 'beurre blanc'],
+    'dessert': ['cake','brownies', 'cookies', 'candy', 'ice cream', 'sundae', 'cookie', 'brownie', 'candies', 'mango sticky rice', 'dessert'],
+    'american': ['casserole', 'burger', 'hamburger', 'hamburgers', 'burgers', 'cheeseburger', 'cheeseburgers', 'fries', 'fried', 'grits', 'mac and cheese', 'lobster roll', 'maine lobster', 'seafood boil', 'barbecue', 'bbq', 'ribs', 'smoked', 'chili', 'american', 'cornbread', 'sloppy joe', 'biscuits', 'meatloaf', 'tater tots', 'jambalaya', 'corn dog'],
+    'english': ['roast', 'toast', 'mashed potatoes', 'shepherd pie', 'english', 'tart', 'swiss', 'yorkshire', 'pudding', 'scone', 'mince pie', 'bangers', 'fish and chips', 'trifle'],
+    'thai': ['tam', 'pad thai', 'tom yum soup', 'thai', 'larb', 'green curry', 'red curry', 'massaman', 'satay'],
+    'vietnamese': ['pho', 'bahn', 'fishcake', 'bun cha', 'banh mi', 'goi cuon', 'ca kho', 'cha gio'],
+    'mediterranean': ['greek', 'hummus', 'kebab', 'hummus', 'egyptian', 'shakshuka', 'briam', 'tabouli', 'grilled swordfish', 'mediterranean', 'tzatziki', 'falafel', 'dolma', 'spanakopita', 'shawarma', 'labneh'],
+    'breakfast': ['egg', 'waffle', 'pancake', 'hashbrowns', 'breakfast', 'bacon', 'scrambled', 'frittata', 'oatmeal', 'omelet', 'granola'],
+    'african': ['zydeco', 'jollof', 'ugali', 'bobotie', 'peri peri', 'yassa', 'african', 'fufu', 'couscous', 'ethiopian', 'ghanian', 'injera', 'tagine', 'bunny chow', 'suya', 'berbere', 'koshari'],
+    'german': ['zw', 'bratwurst', 'schnitzel', 'wurst', 'goulash', 'zu', 'spaetzle', 'strudel', 'currywurst', 'sauerbraten', 'pretzel'],
+    'korean': ['kimchi', 'bibimbap', 'bulgogi', 'jjigae', 'kimbap', 'gochujang', 'galbi', 'tteokbokki'],
+    'spanish': ['paella', 'tapas', 'gazpacho', 'churros', 'tortilla española', 'patatas bravas'],
+    'brazilian': ['feijoada', 'pão de queijo', 'brigadeiro', 'moqueca', 'coxinha'],
+    'turkish': ['baklava', 'doner', 'lahmacun', 'pide', 'borek', 'kofte'],
+    'indonesian': ['rendang', 'nasi goreng', 'sate', 'gado-gado'],
+    'middle eastern': ['mansaf', 'kofta', 'fattoush', 'mutabbal', 'kibbeh', 'maqluba']
 }
 </pre>
 </details>
@@ -51,73 +67,74 @@ cuisine_keywords = {
 
 <p>Unnecessary columns were dropped from the dataframe, including 'tokenized', 'nutrition', 'index', 'review', 'submitted', 'tags', 'n_steps', 'description', 'user_id', 'n_ingredients', 'minutes', 'steps', and 'date'. This left a total of 13 columns in the dataframe, with our final cleaned, merged dataframe looking like this:</p>
 
-<table>
-    <thead>
-        <tr>
-            <th>name</th>
-            <th>recipe_id</th>
-            <th>contributor_id</th>
-            <th>rating</th>
-            <th>average_rating</th>
-            <th>calories</th>
-            <th>total_fat</th>
-            <th>sugar</th>
-            <th>sodium</th>
-            <th>protein</th>
-            <th>saturated_fat</th>
-            <th>carbohydrates</th>
-            <th>cuisine</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1 brownies in the world best ever</td>
-            <td>333281</td>
-            <td>985201</td>
-            <td>4</td>
-            <td>4</td>
-            <td>138.4</td>
-            <td>7</td>
-            <td>25</td>
-            <td>0.069</td>
-            <td>2.1</td>
-            <td>3.8</td>
-            <td>7.8</td>
-            <td>dessert</td>
-        </tr>
-        <tr>
-            <td>1 in canada chocolate chip cookies</td>
-            <td>453467</td>
-            <td>1848091</td>
-            <td>5</td>
-            <td>5</td>
-            <td>595.1</td>
-            <td>32.2</td>
-            <td>105.5</td>
-            <td>0.506</td>
-            <td>9.1</td>
-            <td>10.2</td>
-            <td>33.8</td>
-            <td>dessert</td>
-        </tr>
-        <tr>
-            <td>412 broccoli casserole</td>
-            <td>306168</td>
-            <td>50969</td>
-            <td>5</td>
-            <td>5</td>
-            <td>194.8</td>
-            <td>14</td>
-            <td>3</td>
-            <td>0.736</td>
-            <td>15.4</td>
-            <td>7.2</td>
-            <td>3.9</td>
-            <td>american</td>
-        </tr>
-    </tbody>
-</table>
-
+<div style="overflow-x: auto; max-height: 400px; border: 1px solid #ccc; margin-top: 1em;">
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>recipe_id</th>
+                <th>contributor_id</th>
+                <th>rating</th>
+                <th>average_rating</th>
+                <th>calories</th>
+                <th>total_fat</th>
+                <th>sugar</th>
+                <th>sodium</th>
+                <th>protein</th>
+                <th>saturated_fat</th>
+                <th>carbohydrates</th>
+                <th>cuisine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 brownies in the world best ever</td>
+                <td>333281</td>
+                <td>985201</td>
+                <td>4</td>
+                <td>4</td>
+                <td>138.4</td>
+                <td>7</td>
+                <td>25</td>
+                 <td>0.069</td>
+                <td>2.1</td>
+                <td>3.8</td>
+                <td>7.8</td>
+                <td>dessert</td>
+            </tr>
+            <tr>
+                <td>1 in canada chocolate chip cookies</td>
+                <td>453467</td>
+                <td>1848091</td>
+                <td>5</td>
+                <td>5</td>
+                <td>595.1</td>
+                <td>32.2</td>
+                <td>105.5</td>
+                <td>0.506</td>
+                <td>9.1</td>
+                <td>10.2</td>
+                <td>33.8</td>
+                <td>dessert</td>
+            </tr>
+            <tr>
+                <td>412 broccoli casserole</td>
+                <td>306168</td>
+                <td>50969</td>
+                <td>5</td>
+                <td>5</td>
+                <td>194.8</td>
+                <td>14</td>
+                 <td>3</td>
+                <td>0.736</td>
+                <td>15.4</td>
+                <td>7.2</td>
+                <td>3.9</td>
+                <td>american</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <h2 id="assessmentofmissingness">Assessment of Missingness</h2>
 <p>blah blah blah</p>
 
