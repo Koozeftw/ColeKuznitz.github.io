@@ -12,6 +12,7 @@
         summary { font-weight: bold; cursor: pointer; }
         pre { background-color: #f4f4f4; padding: 10px; overflow: auto; }
     </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
 
