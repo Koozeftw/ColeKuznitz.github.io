@@ -165,6 +165,15 @@ cuisine_keywords = {
         </tbody>
     </table>
 </div>
+<p>If you take a look at the cuisine for 2000 meatloaf, you'd notice that it has been sorted into chinese. This is due to the 'lo' section in meatloaf matching the 'lo' in the chinese dictionary.  This was left like this to show the shortcomings of the sorting function.  This shortcoming was left in due to the fact that otherwise it would have to be changed to become exact matches, meaning that cheeseburgers, would have to be included with cheeseburger, which would drastically increase the size of the dictionary and decrease the efficiency of the matching function.</p>
+<h3 id="univariateanalysis">Univariate Analysis</h3>
+<p>Look at the distributions of relevant columns separately by using DataFrame operations and drawing at least two relevant plots. Embed at least one plotly plot you created in your notebook that displays the distribution of a single column. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present.</p>
+
+<h3 id="bivariateanalysis">Bivariate Analysis</h3>
+<p>Look at the statistics of pairs of columns to identify possible associations. For instance, you may create scatter plots and plot conditional distributions, or box-plots. You must plot at least two such plots in your notebook. Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present.</p>
+
+<h3 id="interestingaggregates">Interesting Aggregates</h3>
+<p>Choose columns to group and pivot by and examine aggregate statistics. Embed at least one grouped table or pivot table in your website and explain its significance.</p>
 <h2 id="assessmentofmissingness">Assessment of Missingness</h2>
 <p>blah blah blah</p>
 
