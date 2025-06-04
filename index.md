@@ -50,6 +50,7 @@ cuisine_keywords = {
     'middle eastern': ['mansaf', 'kofta', 'fattoush', 'mutabbal', 'kib
 ::contentReference[oaicite:0]{index=0}
 ```
+{% endraw %}
 </details>
 This dictionary allowed for the creation of the 'cuisine' column, which contained the sorted cuisine for each dish stored as a string, and 'other' for any dish that didn't fall into any of those categories.  Upon the completion of this column, unnecessary columns were dropped from the dataframe, with those columns being 'tokenized', 'nutrition', 'index', 'review', 'submitted', 'tags', 'n_steps', 'description', 'user_id', 'n_ingredients, 'minutes', 'steps' and 'date.' This left a total of 13 columns in the dataframe, with our final cleaned, merged dataframe looking like this:  
 | name                                 |   recipe_id |   contributor_id |   rating |   average_rating |   calories |   total_fat |   sugar |   sodium |   protein |   saturated_fat |   carbohydrates | cuisine   |
