@@ -132,6 +132,36 @@ cuisine_keywords = {
                 <td>3.9</td>
                 <td>american</td>
             </tr>
+            <tr>
+                <td>millionaire pound cake</td>
+                <td>286009</td>
+                <td>461724</td>
+                <td>5</td>
+                <td>5</td>
+                <td>878.3</td>
+                <td>44.1</td>
+                <td>163</td>
+                <td>0.299</td>
+                <td>14</td>
+                <td>24.6</td>
+                <td>50.7</td>
+                <td>dessert</td>
+            </tr>
+            <tr>
+                <td>2000 meatloaf</td>
+                <td>475785</td>
+                <td>2202916</td>
+                <td>5</td>
+                <td>5</td>
+                <td>267</td>
+                <td>21</td>
+                <td>6</td>
+                <td>0.276</td>
+                <td>20.3</td>
+                <td>9.6</td>
+                <td>2.6</td>
+                <td>chinese</td>
+            </tr>
         </tbody>
     </table>
 </div>
