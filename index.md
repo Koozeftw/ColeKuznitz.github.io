@@ -10,7 +10,7 @@ Data cleaning began with replacing all of the 0 ratings in the 'rating' column w
 <details>
 <summary><strong>Click to expand cuisine dictionary</strong></summary>
 
-```
+```python
 cuisine_keywords = {
     'italian': ['pasta', 'risotto', 'lasagna', 'gnocchi', 'carbonara', 'meatball', 'ziti', 'pizza', 'chicken parmigiana', 'chicken parm', 'eggplant parm', 'italian', 'macaroni', 'bolognese', 'caprese', 'marinara', 'alfredo', 'penne', 'fettuccine', 'spaghetti', 'prosciutto', 'bruschetta', 'calzone', 'tortellini'],
     'mexican': ['taco', 'burrito', 'quesadilla', 'enchilada', 'salsa', 'carne asada', 'tacos', 'burritos', 'mexican', 'fajita', 'guacamole', 'tamale', 'chilaquiles', 'pozole', 'elote', 'horchata', 'menudo', 'mole', 'sope', 'taquito'],
