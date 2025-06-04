@@ -3,7 +3,7 @@
 Author: Cole Kuznitz  
 
 ## Introduction {#introduction}
-blah blah blah 
+Everyone on this planet must eat, but what each person eats everyday variues from person to person.  For many people, they will look online to see recipes or meals that may  and is completely up to The Recipes and Ratings dataset is what I chose to work with.  This dataset is made up of two different csv files, namely the recipes and interactions datasets.  
 
 ## Data Cleaning and Exploratory Analysis {#datacleaningandexploratoryanalysis}
 blah blah blah 
