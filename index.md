@@ -14,7 +14,7 @@ Data cleaning began with replacing all of the 0 ratings in the 'rating' column w
 cuisine_keywords = {
     'italian': ['pasta', 'risotto', 'lasagna', 'gnocchi', 'carbonara', 'meatball', 'ziti', 'pizza', 'chicken parmigiana', 'chicken parm', 'eggplant parm', 'italian', 'macaroni', 'bolognese', 'caprese', 'marinara', 'alfredo', 'penne', 'fettuccine', 'spaghetti', 'prosciutto', 'bruschetta', 'calzone', 'tortellini'],
     'mexican': ['taco', 'burrito', 'quesadilla', 'enchilada', 'salsa', 'carne asada', 'tacos', 'burritos', 'mexican', 'fajita', 'guacamole', 'tamale', 'chilaquiles', 'pozole', 'elote', 'horchata', 'menudo', 'mole', 'sope', 'taquito'],
-    'indian': ['masala', 'curry', 'tikka', 'naan', 'dal', 'naan', 'samosas', 'indian', 'biryani', 'paneer', 'chana', 'rogan', 'roti', 'kachori', 'bhaji', 'pulao', 'idli', 'dosas', 'vindaloo', 'chaat'],
+    'indian': ['masala', 'curry', 'tikka', 'naan', 'dal', 'samosas', 'indian', 'biryani', 'paneer', 'chana', 'rogan', 'roti', 'kachori', 'bhaji', 'pulao', 'idli', 'dosas', 'vindaloo', 'chaat'],
     'japanese': ['sushi', 'teriyaki', 'ramen', 'udon', 'tonkatsu', 'karaage', 'japanese', 'sashimi', 'miso', 'yakitori', 'tempura', 'bento', 'onigiri', 'gyoza', 'matcha'],
     'chinese': ['dumpling', 'kung', 'noodle', 'lo', 'mein', 'peking duck', 'pork intestine', 'dim sum', 'firecracker', 'chinese', 'wonton', 'mapo', 'chow mein', 'hot pot', 'scallion pancake', 'szechuan', 'general tso', 'char siu'],
     'french': ['crepe', 'ratatouille', 'baguette', 'souffle', 'escargot', 'french', 'coq au vin', 'bouillabaisse', 'cassoulet', 'croissant', 'quiche', 'tarte', 'beurre blanc'],
@@ -23,7 +23,7 @@ cuisine_keywords = {
     'english': ['roast', 'toast', 'mashed potatoes', 'shepherd pie', 'english', 'tart', 'swiss', 'yorkshire', 'pudding', 'scone', 'mince pie', 'bangers', 'fish and chips', 'trifle'],
     'thai': ['tam', 'pad thai', 'tom yum soup', 'thai', 'larb', 'green curry', 'red curry', 'massaman', 'satay'],
     'vietnamese': ['pho', 'bahn', 'fishcake', 'bun cha', 'banh mi', 'goi cuon', 'ca kho', 'cha gio'],
-    'mediterranean': ['greek', 'hummus', 'kebab', 'hummus', 'egyptian', 'shakshuka', 'briam', 'tabouli', 'grilled swordfish', 'mediterranean', 'tzatziki', 'falafel', 'dolma', 'spanakopita', 'shawarma', 'labneh'],
+    'mediterranean': ['greek', 'hummus', 'kebab', 'egyptian', 'shakshuka', 'briam', 'tabouli', 'grilled swordfish', 'mediterranean', 'tzatziki', 'falafel', 'dolma', 'spanakopita', 'shawarma', 'labneh'],
     'breakfast': ['egg', 'waffle', 'pancake', 'hashbrowns', 'breakfast', 'bacon', 'scrambled', 'frittata', 'oatmeal', 'omelet', 'granola'],
     'african': ['zydeco', 'jollof', 'ugali', 'bobotie', 'peri peri', 'yassa', 'african', 'fufu', 'couscous', 'ethiopian', 'ghanian', 'injera', 'tagine', 'bunny chow', 'suya', 'berbere', 'koshari'],
     'german': ['zw', 'bratwurst', 'schnitzel', 'wurst', 'goulash', 'zu', 'spaetzle', 'strudel', 'currywurst', 'sauerbraten', 'pretzel'],
@@ -34,7 +34,10 @@ cuisine_keywords = {
     'indonesian': ['rendang', 'nasi goreng', 'sate', 'gado-gado'],
     'middle eastern': ['mansaf', 'kofta', 'fattoush', 'mutabbal', 'kibbeh', 'maqluba']
 }
- ```
+```
+</details>
+
+
 ## Assessment of Missingness {#assessmentofmissingness}
 blah blah blah 
 
