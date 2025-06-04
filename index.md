@@ -51,6 +51,14 @@ cuisine_keywords = {
 ::contentReference[oaicite:0]{index=0}
 ```
 </details>
+This dictionary allowed for the creation of the 'cuisine' column, which contained the sorted cuisine for each dish stored as a string, and 'other' for any dish that didn't fall into any of those categories.  Upon the completion of this column, unnecessary columns were dropped from the dataframe, with those columns being 'tokenized', 'nutrition', 'index', 'review', 'submitted', 'tags', 'n_steps', 'description', 'user_id', 'n_ingredients, 'minutes', 'steps' and 'date.' This left a total of 13 columns in the dataframe, with our final cleaned, merged dataframe looking like this:  
+| name                                 |   recipe_id |   contributor_id |   rating |   average_rating |   calories |   total_fat |   sugar |   sodium |   protein |   saturated_fat |   carbohydrates | cuisine   |
+|:-------------------------------------|------------:|-----------------:|---------:|-----------------:|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|:----------|
+| 1 brownies in the world    best ever |      333281 |           985201 |        4 |                4 |      138.4 |         7   |    25   |    0.069 |       2.1 |             3.8 |             7.8 | dessert   |
+| 1 in canada chocolate chip cookies   |      453467 |          1848091 |        5 |                5 |      595.1 |        32.2 |   105.5 |    0.506 |       9.1 |            10.2 |            33.8 | dessert   |
+| 412 broccoli casserole               |      306168 |            50969 |        5 |                5 |      194.8 |        14   |     3   |    0.736 |      15.4 |             7.2 |             3.9 | american  |
+| 412 broccoli casserole               |      306168 |            50969 |        5 |                5 |      194.8 |        14   |     3   |    0.736 |      15.4 |             7.2 |             3.9 | american  |
+| 412 broccoli casserole               |      306168 |            50969 |        5 |                5 |      194.8 |        14   |     3   |    0.736 |      15.4 |             7.2 |             3.9 | american  |
 
 
 ## Assessment of Missingness {#assessmentofmissingness}
