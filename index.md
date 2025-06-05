@@ -635,12 +635,13 @@ Significance Level: 0.05</p>
 
 <h2 id="framingapredictionproblem">Framing a Prediction Problem</h2>
 <p>I plan to predict the rating of a recipe.  This will be done using a RandomForestClassifier model, as the rating can be considered an ordinal variable, with each rating coming from the list [1,2,3,4,5]. Due to having more than two possible classes, this would be a multiclass classificiation model. <br>
-I chose 'rating' as the response variable because that is the variable that I have been looking at throughout my analysis of the dataset, and I'm curious how well the cuisine columnt that I have curated will help me predict rating.  Rating is also a good response variable becuase it is a very final element to the whole process, as you can only give the recipe a rating after you've read it on Food.com, made the dish, and then eaten it, at least that's the most logical process. <br>
+I chose 'rating' as the response variable because that is the variable that I have been looking at throughout my analysis of the dataset, and I'm curious how well the cuisine column that I have curated will help me predict rating.  Rating is also a good response variable becuase it is a very final element to the whole process, as you can only give the recipe a rating after you've read it on Food.com, made the dish, and then eaten it, at least that's the most logical process. <br>
 To evaluate the model I'm going to use f1-macro due to the highly skewed nature of the 'rating' column in the dataset. <br>
-I plan on training the model using macronutrient data, as well as possibly the 'contributor_id' as this is all information that a person would have prior to even making and eating the dish.  The recipe on Food.com would list the macronutrients, and the 'contributor_id' is referencing the person giving the 'rating', meaning that each person is aware of their own tendencies and what they enjoy when rating items.</p>
+I plan on training the model using macronutrient data. This is all information that is readily available before the dish is even made, and could be used to form a very preliminary idea of that the dish is going to be like.  </p>
 
 <h2 id="baselinemodel">Baseline Model</h2>
-<p>blah blah blah</p>
+<p>The baseline model is a RandomForestClassifier.  It uses the features,'calories', and 'cuisine' and the target is 'average_rating.'  The 'calories' column contains numerical float values, while 'cuisine' is a categorical feature.  The target, 'average_rating', is an ordinal categorical feautre, however it has been casted to an integer to drop the decimals to make it more indicative of the ratings given to each recipe. Due to 'cuisine' being a categorical feauture, it is passed through the OneHotEncoder, creating a matrix that is binary in the fact that a recipe either is or isn't that 'cuisine.' The 'calories' column is left as is due it being a quantitative variable. The dataset has been split into training data and testing data, with 80% being used for training and the other 20% for testing. <br>
+The </p>
 
 <h2 id="finalmodel">Final Model</h2>
 <p>blah blah blah</p>
