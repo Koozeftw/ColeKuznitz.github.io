@@ -631,6 +631,8 @@ Significance Level: 0.05</p>
   </tbody>
 </table>
 
+<p>Due to each of these cuisines having a p-value less than 0.05, the null hypothesis can be rejected and the alternate hypothesis can be accepted, giving reason to believe that the cuisine of the recipe has an impact on the rating of the dish.  Overall, however, it is hard to say as only 9 of the 22 total cuisines that I laid out were able to reject the null hypothesis.  This is limited even more by the fact that the 22 cuisines that were listed in the dictionary are far from every cuisine represented in the full dataset, and the dictionary is far from comprehensive in the cuisine. This goes without mentioning the limiting factor in the accuracy of the sorting as mentioned in the Data Cleaning section.  The testing itself was sound in nature though, revealing that there is a statistically significant skew in the ratings of recipes of nearly 1.5 stars above expected, and that some cuisines were rating differently than would be expected based on the rest of the dataset.</p>
+
 <h2 id="framingapredictionproblem">Framing a Prediction Problem</h2>
 <p>blah blah blah</p>
 
