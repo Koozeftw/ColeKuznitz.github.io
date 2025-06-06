@@ -641,10 +641,78 @@ I plan on training the model using macronutrient data. This is all information t
 
 <h2 id="baselinemodel">Baseline Model</h2>
 <p>The baseline model is a RandomForestClassifier.  It uses the features,'calories', and 'cuisine' and the target is 'average_rating.'  The 'calories' column contains numerical float values, while 'cuisine' is a categorical feature.  The target, 'average_rating', is an ordinal categorical feautre, however it has been casted to an integer to drop the decimals to make it more indicative of the ratings given to each recipe. Due to 'cuisine' being a categorical feauture, it is passed through the OneHotEncoder, creating a matrix that is binary in the fact that a recipe either is or isn't that 'cuisine.' The 'calories' column is left as is due it being a quantitative variable. The dataset has been split into training data and testing data, with 80% being used for training and the other 20% for testing. <br>
-The </p>
+The model performed as shown: <br></p>
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1-Score</th>
+      <th>Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.04</td>
+      <td>119</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.33</td>
+      <td>0.22</td>
+      <td>0.27</td>
+      <td>223</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.50</td>
+      <td>0.47</td>
+      <td>0.48</td>
+      <td>2158</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.56</td>
+      <td>0.61</td>
+      <td>0.58</td>
+      <td>8797</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0.58</td>
+      <td>0.54</td>
+      <td>0.56</td>
+      <td>9555</td>
+    </tr>
+    <tr>
+      <td><strong>Accuracy</strong></td>
+      <td colspan="3" align="center">0.56</td>
+      <td>20852</td>
+    </tr>
+    <tr>
+      <td><strong>Macro Avg</strong></td>
+      <td>0.40</td>
+      <td>0.38</td>
+      <td>0.39</td>
+      <td>20852</td>
+    </tr>
+    <tr>
+      <td><strong>Weighted Avg</strong></td>
+      <td>0.55</td>
+      <td>0.56</td>
+      <td>0.55</td>
+      <td>20852</td>
+    </tr>
+  </tbody>
+</table>
+<p>The lower value classes had bery poor performance, and even the higher value classes which are represented far more, had under 60% accuracy.  This model is not yet suitable, as I would like to see higher accuracy for the more common classes, as well as to shore up the less common classes.</p>
 
-<h2 id="finalmodel">Final Model</h2>
-<p>blah blah blah</p>
+<h2 id ="Final Model">Final Model</h2>h2>
+<p>In addition to 'calorie,', I added the other macronutrient caloumns as features: 'total_fat', 'sugar', 'sodium', 'protein', 'carbohydrates.'  Each of these columns is in units of grams, and describes the amount of each in the recipe. These columns were added as they tell a more complete story about the dish that calories alone cannot capture.  For example, if I personally found a recipe that was 450 calories, but had 50 grams of protein and 20 grams of fat, even if it didn't taste incredible, I'd still give it 5 stars due to its incredible macronutrient breakdown.  </p>
 
 <h2 id="fairnessanalysis">Fairness Analysis</h2>
 <p>blah blah blah</p>
