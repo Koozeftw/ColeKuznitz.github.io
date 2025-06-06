@@ -709,10 +709,54 @@ The model performed as shown: <br></p>
     </tr>
   </tbody>
 </table>
-<p>The lower value classes had bery poor performance, and even the higher value classes which are represented far more, had under 60% accuracy.  This model is not yet suitable, as I would like to see higher accuracy for the more common classes, as well as to shore up the less common classes.</p>
+<p>The lower value classes had very poor performance, and even the higher value classes which are represented far more, had under 60% accuracy.  This model is not yet suitable, as I would like to see higher accuracy for the more common classes, as well as to shore up the less common classes.</p>
 
 <h2 id ="Final Model">Final Model</h2>h2>
-<p>In addition to 'calorie,', I added the other macronutrient caloumns as features: 'total_fat', 'sugar', 'sodium', 'protein', 'carbohydrates.'  Each of these columns is in units of grams, and describes the amount of each in the recipe. These columns were added as they tell a more complete story about the dish that calories alone cannot capture.  For example, if I personally found a recipe that was 450 calories, but had 50 grams of protein and 20 grams of fat, even if it didn't taste incredible, I'd still give it 5 stars due to its incredible macronutrient breakdown.  </p>
+<p>The final model is still a RandomForestClassifier.  The best performing hyperparameters were: 'classifier__max_depth': None, 'classifier__min_samples_leaf': 1, 'classifier__n_estimators': 200. Other changes that I have made from the baseline model includes implementing kfold training. This ensures that the model doesn't overfit to the training data and will be more flexible for the test data. </p>
+<p>In addition to 'calories,', I added the other macronutrient caloumns as features: 'total_fat', 'sugar', 'sodium', 'protein', 'carbohydrates.'  Each of these columns is in units of grams, and describes the amount of each in the recipe. These columns were added as they tell a more complete story about the dish that calories alone cannot capture.  For example, if I personally found a recipe that was 450 calories, but had 50 grams of protein and 20 grams of fat, even if it didn't taste incredible, I'd still give it 5 stars due to its incredible macronutrient breakdown.  I also implemented 3 engineered features:
+<h3 id = "1. balance_score">1. balance_score</h3>
+    This feature was created by dividing the grams of protein by the sum of grams of sugar and sodium.  When looking for healthier dishes people often try to maximize protein while minimizing sugar and sodium.  For this feauture I expect that a higher score will correlate to a higher rating, as this would be perceived as a healthier dish, and thus be rated better. <br>
+<h3 id = "2. carb_protein_ratio">2. carb_protein_ration</h3>
+    This feature is created by dividing the grams of carbs by the grams of proteins. This has a very similar rationale behind the last engineered feature, as for weight loss people often try and cut carbs and maximize protein.  Unlike last feature though, I expect that the lower value will correlate to higher ratings, as the lower the score, the healthier a dish would be perceived as, and if it tasted good, would most likely receive a higher rating. <br>
+<h3 id = "3. protein_density">3. protein_density</h3>
+    Once again this feature is aiming towards a healthier meal.  It is calculated by dividing the number of calories by the amount of grams of protein to get a density value; as in a blank number of calories per gram of protein.  This feature I expect will be like engineered feature number 2, with a smaller value correlating to higher ratings, for much of the same reasons as engineered features 1 and 2.  <br>
+    Overall each of these features are something that I look at, and will calculate in my mind when choosing a dish.  The better each of these values is, the better I feel about myself for eating the meal, and the more that I will enjoy the meal.  This is why I believe that these engineered features will help improve the model. <br>
+    The performance of the model is shown below:
+</p>
+<table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Precision</th>
+        <th>Recall</th>
+        <th>F1-Score</th>
+        <th>Support</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>0.75</td><td>0.05</td><td>0.09</td><td>124</td></tr>
+      <tr><td>2</td><td>0.96</td><td>0.49</td><td>0.65</td><td>232</td></tr>
+      <tr><td>3</td><td>0.96</td><td>0.74</td><td>0.84</td><td>2134</td></tr>
+      <tr><td>4</td><td>0.70</td><td>0.73</td><td>0.72</td><td>8805</td></tr>
+      <tr><td>5</td><td>0.71</td><td>0.73</td><td>0.72</td><td>9557</td></tr>
+      <tr><td><strong>Accuracy</strong></td><td colspan="3"></td><td><strong>0.73</strong></td></tr>
+      <tr><td><strong>Macro Avg</strong></td><td>0.81</td><td>0.55</td><td>0.60</td><td>20852</td></tr>
+      <tr><td><strong>Weighted Avg</strong></td><td>0.73</td><td>0.73</td><td>0.72</td><td>20852</td></tr>
+    </tbody>
+  </table>
+<p> This shows a strict upgrade in every category from the baseline model. An incredibly pleasant observation is the 96% precision amount 3 star ratings.  This huge increase from the 50%.  THe model is now able to predict the more common values more easily, but it is also able to get less common targets better, even if only marginally.  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confusion Matrix</title>
+</head>
+<body>
+  <h1>Confusion Matrix for Final Model</h1>
+  <img src="confusion_matrix.png" alt="Confusion Matrix" />
+</body>
+</html>
+
 
 <h2 id="fairnessanalysis">Fairness Analysis</h2>
 <p>blah blah blah</p>
