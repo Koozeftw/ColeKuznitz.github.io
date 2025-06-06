@@ -744,15 +744,14 @@ The model performed as shown: <br></p>
       <tr><td><strong>Weighted Avg</strong></td><td>0.73</td><td>0.73</td><td>0.72</td><td>20852</td></tr>
     </tbody>
   </table>
-<p> This shows a strict upgrade in every category from the baseline model. An incredibly pleasant observation is the 96% precision amount 3 star ratings.  This huge increase from the 50%.  THe model is now able to predict the more common values more easily, but it is also able to get less common targets better, even if only marginally.  </p>
-<!DOCTYPE html>
+<p> This shows a strict upgrade in every category from the baseline model. An incredibly pleasant observation is the 96% precision amount 3 star ratings.  This huge increase from the 50%.  The model is now able to predict the more common values more easily, but it is also able to get less common targets better, even if only marginally.  </p>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Confusion Matrix</title>
 </head>
 <body>
-  <h1>Confusion Matrix for Final Model</h1>
+  <h3>Confusion Matrix for Final Model</h3>
   <img src="confusion_matrix.png" alt="Confusion Matrix" />
 </body>
 </html>
