@@ -178,11 +178,10 @@ cuisine_keywords = {
 <h3 id="interestingaggregates">Interesting Aggregates</h3>
 <p>Choose columns to group and pivot by and examine aggregate statistics. Embed at least one grouped table or pivot table in your website and explain its significance.</p>
  <style>
-    /* Container for scroll */
     .table-container {
       width: 100%;
       max-width: 900px;
-      height: 300px; /* Adjust height as needed */
+      height: 300px;
       overflow: auto;
       border: 1px solid #ccc;
       margin: 20px auto;
@@ -191,7 +190,8 @@ cuisine_keywords = {
     table {
       border-collapse: collapse;
       width: 100%;
-      min-width: 1200px; /* To allow horizontal scroll */
+      min-width: 1200px;
+      color: black;
     }
 
     th, td {
@@ -209,7 +209,7 @@ cuisine_keywords = {
     }
 
     thead tr:nth-child(2) th {
-      background: #eee; /* Slightly different color for second header row */
+      background: #eee;
     }
 
     th:first-child, tbody th {
@@ -220,7 +220,6 @@ cuisine_keywords = {
       z-index: 3;
     }
   </style>
-</head>
 <body>
 
   <div class="table-container">
@@ -245,7 +244,7 @@ cuisine_keywords = {
           <th>total_fat_5.0</th>
         </tr>
         <tr>
-          <th>cuisine</th>
+          <th>Cuisine</th>
           <th></th>
           <th></th>
           <th></th>
