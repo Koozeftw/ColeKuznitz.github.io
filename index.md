@@ -206,10 +206,12 @@ cuisine_keywords = {
       top: 0;
       background: #f9f9f9;
       z-index: 2;
+      color: black;
     }
 
     thead tr:nth-child(2) th {
       background: #eee;
+      color: black;
     }
 
     th:first-child, tbody th {
@@ -218,6 +220,7 @@ cuisine_keywords = {
       position: sticky;
       left: 0;
       z-index: 3;
+      color: black;
     }
   </style>
 <body>
