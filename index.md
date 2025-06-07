@@ -233,7 +233,7 @@ cuisine_keywords = {
     <table border="1" class="dataframe">
       <thead>
         <tr>
-          <th>Cuisine</th>
+          <th></th>
           <th>calories_1.0</th>
           <th>calories_2.0</th>
           <th>calories_3.0</th>
@@ -249,7 +249,24 @@ cuisine_keywords = {
           <th>total_fat_3.0</th>
           <th>total_fat_4.0</th>
           <th>total_fat_5.0</th>
-          <th></th>
+        </tr>
+        <tr>
+            <th>Cuisine</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
       </thead>
       <tbody>
