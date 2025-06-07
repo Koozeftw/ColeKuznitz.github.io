@@ -189,7 +189,7 @@ cuisine_keywords = {
 
   table {
     border-collapse: collapse;
-    width: max-content; /* Prevents shrinking */
+    width: max-content;
     min-width: 1200px;
     table-layout: fixed;
     color: black;
@@ -202,15 +202,14 @@ cuisine_keywords = {
     white-space: nowrap;
     color: black;
     background: white;
+    min-width: 120px;
   }
-
-  thead th {
+  thead tr:nth-child(1) th {
     position: sticky;
     top: 0;
     background: #f9f9f9;
     z-index: 2;
   }
-
   thead tr:nth-child(2) th {
     background: #eee;
   }
@@ -223,10 +222,8 @@ cuisine_keywords = {
     left: 0;
     z-index: 3;
   }
-  th, td {
-    min-width: 120px;
-  }
 </style>
+
 <body>
 
   <div class="table-container">
