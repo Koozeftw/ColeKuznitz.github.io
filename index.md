@@ -178,51 +178,55 @@ cuisine_keywords = {
 <h3 id="interestingaggregates">Interesting Aggregates</h3>
 <p>Choose columns to group and pivot by and examine aggregate statistics. Embed at least one grouped table or pivot table in your website and explain its significance.</p>
  <style>
-    .table-container {
-      width: 100%;
-      max-width: 900px;
-      height: 300px;
-      overflow: auto;
-      border: 1px solid #ccc;
-      margin: 20px auto;
-    }
+  .table-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: 400px; 
+    overflow: auto;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+  }
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      min-width: 1200px;
-      color: black;
-    }
+  table {
+    border-collapse: collapse;
+    width: max-content; /* Prevents shrinking */
+    min-width: 1200px;
+    table-layout: fixed;
+    color: black;
+  }
 
-    th, td {
-      border: 1px solid #999;
-      padding: 6px 10px;
-      text-align: right;
-      white-space: nowrap;
-    }
+  th, td {
+    border: 1px solid #999;
+    padding: 6px 10px;
+    text-align: right;
+    white-space: nowrap;
+    color: black;
+    background: white;
+  }
 
-    thead th {
-      position: sticky;
-      top: 0;
-      background: #f9f9f9;
-      z-index: 2;
-      color: black;
-    }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: #f9f9f9;
+    z-index: 2;
+  }
 
-    thead tr:nth-child(2) th {
-      background: #eee;
-      color: black;
-    }
+  thead tr:nth-child(2) th {
+    background: #eee;
+  }
 
-    th:first-child, tbody th {
-      text-align: left;
-      background: #f1f1f1;
-      position: sticky;
-      left: 0;
-      z-index: 3;
-      color: black;
-    }
-  </style>
+  th:first-child,
+  tbody th {
+    text-align: left;
+    background: #f1f1f1;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+  }
+  th, td {
+    min-width: 120px;
+  }
+</style>
 <body>
 
   <div class="table-container">
